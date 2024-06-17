@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta property="og:image" content="http://mksvn.com/img/mksvn-og.jpg" />
+
+		<title>Michelle Meksavanh &#10141; UX/UI Designer, Visual Designer, Front-End Developer</title>
+
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+		<!-- animsition.css -->
+		<link rel="stylesheet" href="../css/animsition.css">
+
+	</head>
+	<body class="d-flex flex-column h-100">
+		<div class="animsition-overlay" data-animsition-overlay="true"></div>
+		<div class="container mt-5">
+			<div class="row text-center mb-5">
+				<div class="col-12">
+					<h4>Michelle Meksavanh</h4>
+					UX/UI Designer, Front-End Developer<br>
+					<a href="https://dribbble.com/michellemeksavanh" target="_blank" class="no-transition"><img src="../img/dribbble.svg" alt="Dribbble" class="footer-icons"></a>
+					<a href="mailto:m.mksvn@gmail.com" class="no-transition"><img src="../img/email.svg"></a> 
+				</div>
+			</div>
+			<div class="row justify-content-around align-items-center">
+				<div class="col-8 text-center">
+					<h1 class="mb-5">Kiosk ordering system tailored for buffets</h1>
+					<img src="../img/kiosk-header.jpg" style="width: 100%;" />
+				</div>
+			</div>
+			<div class="row justify-content-center mt-5 mb-5">
+				<div class="col-6">
+					<strong>Client</strong><br />
+					<span>Aurora Data Logic is a software engineering company that specializes in custom point of sales systems.</span><br><br>
+
+					<strong>My Role</strong><br />
+					Design a kiosk ordering system interface that's centered around a casino buffet host's payment process and optimized for tablets.<br><br>
+
+					<div class="accordion-contianer">
+						<button class="accordion">User Stories</button>
+						<div class="panel">
+							<ul>
+							<li>As a buffet host, I want to add guests to the bill as either adults, seniors or children, so they are charged the appropriate amounts.</li>
+							<li>As a buffet host, I want to review an order before payment, so that I can make adjustments if needed.</li>
+							<li>As a buffet host, I want to add a player's card and accept card payments, so I can apply discounts and close the check.</li>
+							</ul>
+						</div>
+						</div>
+				</div>
+			</div>
+	</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-12 text-center">
+					<img src="../img/kiosk-menu.png" class="img-fluid" />
+				</div>
+				<div class="col-12 text-center">
+					<p><img src="../img/kiosk-payment.png" class="img-fluid" /></p>
+				</div>
+				<div class="col-12 text-center">
+					<img src="../img/kiosk-tip.png" class="img-fluid" /><br /><br />
+				</div>
+			</div>
+			<div class="row pagination">
+				<div class="col text-center">
+					<a href="/projects/hday.html" class="big-link">&larr; Previous</a> 
+					<!-- &nbsp;  &nbsp;  &nbsp; <a href="/projects/vpt.php" class="big-link">Next &rarr;</a> -->
+				</div>
+			</div>
+		</div>
+
+		<footer class="container-fluid">
+			<div class="row">
+				<div class="col">
+					<div class="container">
+						<div class="row justify-content-between">
+							<div class="col-12 text-center col-12" id="copyright">
+								&copy; Michelle Meksavanh 2024
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</footer>
+		</div> <!-- /.animsition-overlay -->
+		
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+		<script src="../js/animsition.min.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+			  $("a").each(function(){
+			  	if ( !(this.classList.contains("no-transition")) ) {
+			  		$(this).addClass('animsition-link');
+			  	}
+			  });
+			  $(".animsition-overlay").animsition({
+			    inClass: 'overlay-slide-in-left',
+			    outClass: 'overlay-slide-out-left',
+			    inDuration: 1500,
+			    outDuration: 800,
+			    linkElement: '.animsition-link',
+			    // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+			    loading: true,
+			    loadingParentElement: 'body', //animsition wrapper element
+			    loadingClass: 'animsition-loading',
+			    loadingInner: '', // e.g '<img src="loading.svg" />'
+			    timeout: false,
+			    timeoutCountdown: 5000,
+			    onLoadEvent: true,
+			    browser: [ 'animation-duration', '-webkit-animation-duration'],
+			    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+			    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+			    overlay : true,
+			    overlayClass : 'animsition-overlay-slide',
+			    overlayParentElement : 'body',
+			    transition: function(url){ window.location.href = url; }
+			  });
+			  	$(".accordion").on("click", function() {
+				$(this).toggleClass("accordion-active");
+				$(this).next().slideToggle(200);
+			  });
+			});
+		</script>
+	</body>
+</html>

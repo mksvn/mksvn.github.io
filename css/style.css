@@ -317,6 +317,47 @@ ol li:before {
     width: 100%;
 }
 /*************************
+ * Accordion
+ ************************/
+ .accordion:focus {
+	outline: 0;
+ }
+ .accordion {
+	background-color: #fff;
+	color: #000;
+	cursor: pointer;
+	padding: 0;
+	width: auto;
+	text-align: left;
+	border: none;
+	outline: none;
+	transition: 0.4s;
+	font-weight: bold;
+}
+.panel {
+padding: 0 18px;
+background-color: white;
+display: none;
+overflow: hidden;
+}
+.panel ul {
+	padding-left: 22px;
+  }
+.accordion:after {
+/* Unicode character for "plus" sign (+) */
+content: "\f078";
+font-family: 'Font Awesome 6 Free';
+font-size: 13px;
+color: #539dd6;
+float: right;
+margin-left: 5px;
+}
+
+.accordion-active:after {
+/* Unicode character for "minus" sign (-) */
+content: "\f077";
+}  
+/*************************
  * Footer
  ************************/
  footer {
@@ -334,10 +375,10 @@ ol li:before {
  footer a:hover {
  	text-decoration: none;
  }
- footer ../img {
+ /* footer ../img {
  	padding-right: 5px;
     margin-top: -5px;
- }
+ } */
  #copyright {
  	color: #c5c5c5;
     font-weight: normal;

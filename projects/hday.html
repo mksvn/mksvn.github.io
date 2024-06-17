@@ -10,83 +10,60 @@
 		<!-- Bootstrap core CSS -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 		<!-- animsition.css -->
 		<link rel="stylesheet" href="../css/animsition.css">
 
 	</head>
 	<body class="d-flex flex-column h-100">
-		<div class="animsition-overlay" data-animsition-overlay="true">
-		<header class="container-fluid fixed-top">
-		<!-- Fixed navbar -->
-		<nav class="container navbar navbar-light">
-			<a class="navbar-brand" href="/"><h1>m.</h1></a>
-			<button id="menu-button" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-			  <span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarCollapse">
-				<div class="text-center" id="nav-branding">
-					<h3>Michelle Meksavanh</h3>
-					UX/UI Designer, Front-End Developer
+		<div class="animsition-overlay" data-animsition-overlay="true"></div>
+		
+		<div class="container mt-5">
+			<div class="row text-center mb-5">
+				<div class="col-12">
+					<h4>Michelle Meksavanh</h4>
+					UX/UI Designer, Front-End Developer<br>
+					<a href="https://dribbble.com/michellemeksavanh" target="_blank" class="no-transition"><img src="../img/dribbble.svg" alt="Dribbble" class="footer-icons"></a>
+					<a href="mailto:m.mksvn@gmail.com" class="no-transition"><img src="../img/email.svg"></a> 
 				</div>
-			  <ul class="navbar-nav mr-auto">
-			    <li class="nav-item active">
-			      <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-			    </li>
-			    <li class="nav-item">
-			      <a class="nav-link" href="/projects/hday.php">HeyDay</a>
-			    </li>
-			    <li class="nav-item">
-			      <a class="nav-link" href="/projects/abf.php">America's Best Franchise</a>
-			    </li>
-			    <li class="nav-item">
-			      <a class="nav-link" href="/projects/mkr.php">Makers</a>
-			    </li>
-			    <li class="nav-item">
-			      <a class="nav-link" href="/projects/alg.php">Allegiant</a>
-			    </li>
-			    <li class="nav-item">
-			      <a class="nav-link" href="/projects/vpt.php">Vape Parfait</a>
-			    </li>
-			    <li class="nav-item">
-			      <a class="nav-link" href="/projects/lse.php">Life Support Education</a>
-			    </li>
-			    <li class="nav-item">
-			      <a class="nav-link" href="mailto:m.mksvn@gmail.com" class="no-transition">Contact</a>
-			    </li>
-			  </ul>
 			</div>
-		</nav>
-		</header>
+			<div class="row justify-content-around align-items-center">
+				<div class="col-8 text-center">
+					<h1 class="mb-5">On the go hands-free communication</h1>
+					<img src="../img/hday-header.jpg" style="width: 100%;" />
+				</div>
+			</div>
+			<div class="row justify-content-center mt-5 mb-5">
+				<div class="col-6">
+					<strong>Client</strong><br />
+					<span>HeyDay App is a push notification service used by engineers to send their app communications to wearable devices.</span><br><br>
 
-		<div class="container project-container">
-			<div class="row justify-content-center text-center">
-				<div class="col-12 col-lg-6">
-					<div class="container">
-						<div class="row">
-							<div class="col">
-								<h1>HeyDay App</h1>
-							</div>
+					<strong>My Role</strong><br />
+					Provide various deliverables using the 'minimum viable product strateg' to abide by the restraints of time and budget.<br><br>
+
+					<strong>Creative Direction, Visual Design, Front-End Development</strong>
+					<ul>
+						<li>Create branding that includes of a logo, illustrations, style guide (mvp) and UI design system (mvp)</li>
+						<li>Create social media assets, a landing page and email template with new branding</li>
+					</ul>
+				
+					<strong>UX/UI Design</strong>
+					<ul>
+						<li>Design a web dashboard where engineers can create message channels and subscribe users to them.</li>
+						<li>Design a mobile app where users can receive messages from channels. Mock up the app on wearOS and watchOS.</li>
+					</ul>
+
+					<div class="accordion-contianer">
+						<button class="accordion">User Stories</button>
+						<div class="panel">
+						  <ul>
+							<li>As an engineer, I want to create channels and subscribed users to it, so that I can feed messages into the channel and notify users.</li>
+							<li>As an engineer, I want to see an overview of channels, so that I can review them all at once.</li>
+							<li>As an engineer, I want to deactivate channels, so that I can pause or stop sending messages.</li>
+							<li>As a subscribed user, I want to be notified of new messages on my iPhone, Apple watch or Android watch, so that I can address them immediately.</li>
+						  </ul>
 						</div>
-						<div class="row">
-							<div class="col">
-								<p>HeyDay app runs along side yours to keep the user engaged on important notifications and actionable items. HeyDay does all the heavy lifting of the push notification infrastructure so that you could focus on what matters, building your awesome app.</p>
-							</div>
-						</div>
-						<div class="row justify-content-center">
-							<div class="col-12 col-sm-8">
-								<strong>My Role</strong><br />
-								Creative Direction, Branding, UI Design, Front-End Development
-							</div>
-						</div>
-						<div class="row">
-							<div class="container divider"></div>
-						</div>
-						<div class="row">
-							<div class="col text-center">
-								<img src="../img/hday.png" class="project-logo" alt="UI Design, Front-End Development" /><br /><br /><br />
-							</div>
-						</div>
-					</div>
+					  </div>
 				</div>
 			</div>
 		</div>
@@ -161,9 +138,19 @@
 					<img src="../img/hday_browser3.png" class="img-fluid" alt="Web UI" /><br /><br />
 				</div>	
 			</div>
+		</div>
+		<div class="container">
+			<div class="row justify-content-center mt-5">
+				<div class="col-7 text-center">
+					<h2>Here's what the client said</h2>
+					<p>
+						"I've worked with Michelle on several projects and she impresses me every time.  I'm able to give her a general idea of the project, provide some keywords, and pictures and let her take over the creative side.  The end product is always spot on with the vision of the project.  She is also very professional and prompt on her deliverables.  If your project is short on some designs, contact Michelle and give her full creativity control.  She will take your project to the next level.  I will be working with her on my future projects."
+					</p>
+				</div>
+			</div>
 			<div class="row pagination">
 				<div class="col text-center">
-					<a href="/projects/mkr.php" class="big-link">Next &rarr;</a>
+					<a href="../projects/kiosk.html" class="big-link">Next &rarr;</a>
 				</div>
 			</div>
 		</div>
@@ -195,56 +182,6 @@
 		<script src="../js/animsition.min.js"></script>
 
 		<script type="text/javascript">
-
-			var button = document.getElementById("menu-button");
-			var header = document.getElementsByTagName("header");
-			var main = document.getElementsByTagName("main");
-			var logo = document.getElementsByClassName("navbar-brand");
-			var click = 0;
-
-			button.addEventListener("click", function() {
-				var position = (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0);
-
-				click ++;
-
-				if (position < 25) {
-					if (click % 2) { // opening nav (opens on odd number of clicks)
-						header[0].style.backgroundColor = "#fff";
-						header[0].style.borderBottom = "1px solid #ccc";
-						logo[0].style.visibility = "hidden";
-					} else { // closing nav
-						setTimeout(function(){
-							header[0].style.backgroundColor = "transparent"
-							header[0].style.borderBottom = "none";
-							logo[0].style.visibility = "visible";
-						}, 350);
-					}
-				}
-
-				if (click % 2){
-					logo[0].style.visibility = "hidden";
-				} else {
-					logo[0].style.visibility = "visible";
-				}
-			});
-			
-			$(window).on("load resize scroll",function(e){
-				var position = (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0);
-
-				if (position > 25) {
-					header[0].style.backgroundColor = "#fff";
-					header[0].style.borderBottom = "1px solid #ccc";
-				} else {
-					var navbar = document.getElementById("navbarCollapse");
-
-					// change header color only if menu is closed
-					if (!navbar.classList.contains("show")) {
-						header[0].style.backgroundColor = "transparent"
-						header[0].style.borderBottom = "none";
-					}
-				}
-			});
-
 			$(document).ready(function() {
 			  $("a").each(function(){
 			  	if ( !(this.classList.contains("no-transition")) ) {
@@ -272,6 +209,10 @@
 			    overlayClass : 'animsition-overlay-slide',
 			    overlayParentElement : 'body',
 			    transition: function(url){ window.location.href = url; }
+			  });
+			  	$(".accordion").on("click", function() {
+				$(this).toggleClass("accordion-active");
+				$(this).next().slideToggle(200);
 			  });
 			});
 		</script>
