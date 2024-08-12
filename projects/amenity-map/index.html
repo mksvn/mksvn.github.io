@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charSet="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta property="og:title" content="Interactive Property Maps without Google Maps">
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Display popular amentities near your commercial real estate property.">
+    <meta property="og:image" content="https://verimeta.com/real-estate-maps/googlefree/img/1200x630-m.jpg">
+    <meta property="og:url" content="https://verimeta.com/real-estate-maps/googlefree/">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Interactive Property Maps without Google Maps - Verimeta Creative Consultancy</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@5/animations/scale.css" />
+    <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  
+    <script type="text/javascript" src="https://cdn.rawgit.com/asvd/dragscroll/master/dragscroll.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147724311-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-147724311-2');
+    </script>
+  </head>
+  <body>
+
+    <header class="container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-8 col-lg-10 logo justify-content-start">
+            <img src="img/verimeta-real-estate-marketing.png" alt="Verimeta Real Estate Marketing" />
+          </div>
+          <div class="d-none d-md-block col-md-4 col-lg-2">
+            <a href="mailto:admin@verimeta.com"><div class="button">Contact Us</div></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="container-fluid intro">
+      <div class="container">
+        <div class="row justify-content-center">
+
+          <h1>Google-Free Property Maps</h1>
+          <p>
+            Display popular amentities near your commercial real estate property. <span class="d-inline d-md-block">No monthly fee from Google Maps.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-fluid map-container-fluid">
+      <div class="container mapwrapper">
+        <div class="row">
+
+          <section class="col-11 order-2 col-md-10 col-lg-5 order-lg-1 menu-sidebar">
+            <ul class="nav nav-tabs d-flex justify-content-center justify-content-lg-start" role="tablist">
+              <li id="nav-dining" class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#dining" role="tab" aria-controls="dining" aria-selected="true">
+                  <i class="fas fa-utensils"></i>
+                  Dining
+                </a>
+              </li>
+              <li id="nav-retail" class="nav-item">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#shopping" role="tab" aria-controls="shopping" aria-selected="false">
+                  <i class="fas fa-shopping-bag"></i>
+                  Shopping
+                </a>
+              </li>
+              <li id="nav-services" class="nav-item">
+                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#services" role="tab" aria-controls="services" aria-selected="false">
+                  <i class="fas fa-building"></i>
+                  Services
+                </a>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="dining" role="tabpanel" aria-labelledby="dining-tab">
+                <ul>
+                  <li>
+                    <button id="nobu">
+                      <span class="placename">Nobu</span>
+                      <span class="address">195 Broadway<br />New York, NY 10007</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button id="morton">
+                      <span class="placename">Morton’s The Steakhouse</span>
+                      <span class="address">136 Washington St<br />New York, NY 10006</span></button>
+                  </li>
+                  <li>
+                    <button id="piera">
+                      <span class="placename">Pier A Harbor House</span>
+                      <span class="address">22 Battery Pl<br />New York, NY 10004</span></button>
+                  </li>
+                  <li>
+                    <button id="watermark">
+                      <span class="placename">Watermark Bar</span>
+                      <span class="address">78 South St Pier 15<br />New York, NY 10038</span></button>
+                  </li>
+                  <li>
+                    <button id="capital">
+                      <span class="placename">Capital Grille</span>
+                      <span class="address">120 Broadway<br />New York, NY 10271</span></button>
+                  </li>
+                  <li>
+                    <button id="lappart">
+                      <span class="placename">L’Appart</span>
+                      <span class="address">225 Liberty St<br />New York, NY 10281</span></button>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-pane fade" id="shopping" role="tabpanel" aria-labelledby="shopping-tab">
+                  <ul>
+                    <li>
+                      <button id="target">
+                        <span class="placename">Target</span>
+                        <span class="address">255 Greenwich St<br />New York, NY 10007</span></button>
+                    </li>
+                    <li>
+                      <button id="downtown">
+                        <span class="placename">Downtown Music Gallery</span>
+                        <span class="address">13 Monroe St<br />New York, NY 10002</span></button>
+                    </li>
+                    <li>
+                      <button id="tj">
+                        <span class="placename">TJ Maxx</span>
+                        <span class="address">14 Wall St<br />New York, NY 10005</span></button>
+                    </li>
+                    <li>
+                      <button id="seaport">
+                        <span class="placename">Seaport District NYC</span>
+                        <span class="address">19 Fulton St<br />New York, NY 10038</span></button>
+                    </li>
+                    <li>
+                      <button id="duane">
+                        <span class="placename">Duane Reade</span>
+                        <span class="address">17 John St<br />New York, NY 10038</span></button>
+                    </li>
+                    <li>
+                      <button id="brook">
+                        <span class="placename">Brookfield Place</span>
+                        <span class="address">230 Vesey St<br />New York, NY 10281</span></button>
+                    </li>
+                  </ul>
+              </div>
+              <div class="tab-pane fade" id="services" role="tabpanel" aria-labelledby="services-tab">
+                <ul>
+                  <li>
+                    <button id="stock">
+                      <span class="placename">NY Stock Exchange</span>
+                      <span class="address">11 Wall St<br />New York, NY 10005</span></button>
+                  </li>
+                  <li>
+                    <button id="dmv">
+                      <span class="placename">DMV</span>
+                      <span class="address">11 Greenwich St<br />New York, NY 10004</span></button>
+                  </li>
+                  <li>
+                    <button id="battery">
+                      <span class="placename">Battery Park City School</span>
+                      <span class="address">55 Battery Pl<br />New York, NY 10280</span></button>
+                  </li>
+                  <li>
+                    <button id="cityhall">
+                      <span class="placename">NY City Hall</span>
+                      <span class="address">City Hall Park<br />New York, NY 10007</span></button>
+                  </li>
+                  <li>
+                    <button id="hospital">
+                      <span class="placename">NY Presbyterian Hospital</span>
+                      <span class="address">170 William St<br />New York, NY 10038</span></button>
+                  </li>
+                  <li>
+                    <button id="wtc">
+                      <span class="placename">World Trade Center</span>
+                      <span class="address">285 Fulton St<br />New York, NY 10007</span></button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <div class="gradient">
+            <div id="expandMap" class="align-bottom"><i class="fas fa-chevron-down"></i></div>
+          </div>
+
+          <section id="map" class="col-12 order-1 col-lg-7 order-lg-2 map-compact dragscroll">
+
+            <div class="gesture-cue">
+              <i class="fas fa-arrow-left"></i>
+              <div class="gesture-cure-hand"><img src="img/grab.svg" alt=""></div>
+              <i class="fas fa-arrow-right"></i>
+            </div>
+
+            <div id="map-image">
+
+              <div class="main-marker"><img src="img/marker.png" alt=""></div>
+  <!-- Dining -->
+              <div id="dining-markers">
+                <button id="marker-nobu" class="marker dining"><span><i class="fas fa-utensils"></i></span></button>
+                <button id="marker-morton" class="marker dining"><span><i class="fas fa-utensils"></i></span></button>
+                <button id="marker-piera" class="marker dining"><span><i class="fas fa-utensils"></i></span></button>
+                <button id="marker-watermark" class="marker dining"><span><i class="fas fa-utensils"></i></span></button>
+                <button id="marker-capital" class="marker dining"><span><i class="fas fa-utensils"></i></span></button>
+                <button id="marker-lappart" class="marker dining"><span><i class="fas fa-utensils"></i></span></button>
+              </div>
+  <!-- Shopping -->
+              <div id="retail-markers">
+                <button id="marker-target" class="marker retail"><span><i class="fas fa-shopping-bag"></i></span></button>
+                <button id="marker-downtown" class="marker retail"><span><i class="fas fa-shopping-bag"></i></span></button>
+                <button id="marker-tj" class="marker retail"><span><i class="fas fa-shopping-bag"></i></span></button>
+                <button id="marker-seaport" class="marker retail"><span><i class="fas fa-shopping-bag"></i></span></button>
+                <button id="marker-duane" class="marker retail"><span><i class="fas fa-shopping-bag"></i></span></button>
+                <button id="marker-brook" class="marker retail"><span><i class="fas fa-shopping-bag"></i></span></button>
+              </div>
+  <!-- Services -->
+              <div id="services-markers">
+                <button id="marker-stock" class="marker services"><span><i class="fas fa-building"></i></span></button>
+                <button id="marker-dmv" class="marker services"><span><i class="fas fa-building"></i></span></button>
+                <button id="marker-battery" class="marker services"><span><i class="fas fa-building"></i></span></button>
+                <button id="marker-cityhall" class="marker services"><span><i class="fas fa-building"></i></span></button>
+                <button id="marker-hospital" class="marker services"><span><i class="fas fa-building"></i></span></button>
+                <button id="marker-wtc" class="marker services"><span><i class="fas fa-building"></i></span></button>
+              </div>
+
+              <img src="img/manhattan-lt.jpg" width="855" alt="">
+
+            </div>
+
+          </section>
+
+        </div>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/popper.js@1"></script>
+    <script src="https://unpkg.com/tippy.js@5"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
