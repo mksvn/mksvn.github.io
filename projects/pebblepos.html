@@ -20,9 +20,6 @@
 				padding: 30px 50px;
 				border-radius: 5px;
 			}
-			h3 {
-				font-family: 'Muli', sans-serif;
-			}
 		</style>
 	</head>
 	<body class="d-flex flex-column h-100">
@@ -36,42 +33,104 @@
 			</div>
 			<div class="row justify-content-center mt-5 mb-5">
 				<div class="col-12 col-lg-6">
-					<h1 class="mb-5 text-center">Mobile Menu Generator</h1>
-					<p><i>“Nothing makes me want to eat at a restaurant less than when I click on their menu and a PDF downloads to my phone.”</i></p>
-					<strong>Overview</strong><br>
-					A personal project created to help restaurants by turning their physical menus into mobile friendly pages during the time after the 2020 pandemic shut down where contactless ordering was necessary.<br><br>
-					It’s intended to replace PDF menus that were often used and usually not sized properly for a phone screen, requiring the customer to pinch to zoom until their fingers went off the phone’s surface area and swipe miles across the document to get to the beverages.
+
+					<div class="col-12 text-center">
+						<h1 class="mb-5">Order system scalable redesign and feature optimization</h1>
+						<img src="../img/pebblemock.png" alt="" style="max-width: 300px;">
+					</div>
+					<br /><br />
+					<strong>Client</strong><br />
+					<span>PebblePOS has an ordering system tailored for hotel restaurants. On the visual side, the UI did not align with their brand. On the user experience side, their split payment feature and menu navigation were required excessive steps.</span><br><br>
+
+					<strong>My Role:</strong> UX/UI Designer<br />
+					<strong>Team:</strong> Aurora Data Logic, Kevin A. (Project Manager & Engineer)<br />
+					<strong>Year:</strong> 2023<br />
+					<strong>Timeline:</strong> 2 weeks<br /><br />
+				   
+					<strong>Goals</strong><br />
+					<ul>
+						<li>Create design library for redesign</li>
+						<li>Add a split payment feature </li>
+						<li>Reduce waiter's task time when adding menu items</li>
+					</ul>
 				</div>	
 			</div>
 		</div>
 		<div class="container-fluid add-padding grey-bg">
-			<div class="row justify-content-center text-center">
-				<div class="col-12 col-lg-4">
-					<strong>How it works</strong><br>
-					The user uploads a spreadsheet of their menu. The CSV is processed and the data is loaded into a responsive menu template. 
-					<p><strong><a href="/projects/menu-generator" class="button-blk">Try It</a></strong></p>
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-12 text-center">
+						<h2>The Process</h2><br><br>
+					</div>
+					<div class="row justify-content-center">
+						<div class="col-12 col-lg-4">
+							<h3>Split payment</h3>
+							<p><strong>Analysis</strong><br> A usability test on the old UI shows a waiter can apply multiple types of payments to a single check but to split the total evenly, the server would have to manually do the math, leaving room for human error and slowing down their workflow.</p>
+							<p><strong>Solution</strong><br> The new feature would split the total amount equally into a specified number of checks and checks are closed out in segments.
+							</p>
+						</div>
+						<div class="col-12 col-lg-4">
+							<img src="../img/pebblesplitpayment.gif" class="img-fluid" style="max-height: 600px;" />
+
+						</div>
+					</div>
 				</div>
 			</div>
-
-			<div class="row justify-content-center text-center">
-				<div class="col-12 col-lg-6">
-					<video width="100%" height="auto" controls autoplay muted loop>
-						<source src="../img/menu.mp4" type="video/mp4">
-						Your browser does not support the video tag.
-					</video>	
+		</div>
+		<div class="container-fluid add-padding grey-bg">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-12 col-lg-4">
+						<h3>Optimize food selection</h3>
+						<p><strong>Analysis</strong><br> A usability test on the old UI shows the waiter has to do a lot of back and forth to get from categories into menu items</p>
+						<p><strong>Solution</strong><br> Place all categories and items on a single screen with a quick access navigation</p>
+					</div>
+					<div class="col-12 col-lg-4">
+						<img src="../img/pebbleadditem.gif" class="img-fluid" style="max-height: 600px;" />
+					</div>
 				</div>
 			</div>
-
-			<div class="row justify-content-center text-center">
-				<div class="col-12 col-lg-6"><br>
-					<strong>Constraints and improvements</strong><br>
-					In this version, the user is expected to have some knowledge of what to do with the HTML. To improve this user experience and expand the target audience to users without technical knowledge would require a budget that allows the menu pages to be hosted on my end and a QR code would be provided for the restaurant to use.
+		</div>
+		<div class="container-fluid add-padding">
+			<div class="row justify-content-center">
+				<div class="col-12 text-center">
+					<h2>The Redesign</h2><br><br>
+				</div>
+			</div>
+				
+			<div class="row justify-content-center mb-5">
+				<div class="col-12 text-center">
+					<h3>Before</h3><br>
+				</div>
+				<div class="col-12 col-lg-2">
+					<img src="../img/before-tables.png" class="img-fluid" style="max-height: 600px;border: 1px solid #ccc;" />
+				</div>
+				<div class="col-12 col-lg-2">
+					<img src="../img/before-menu.png" class="img-fluid" style="max-height: 600px;border: 1px solid #ccc;" />
+				</div>
+				<div class="col-12 col-lg-2">
+					<img src="../img/before-pay.png" class="img-fluid" style="max-height: 600px;border: 1px solid #ccc;" />
+				</div>
+			</div>
+				
+			<div class="row justify-content-center">
+				<div class="col-12 text-center">
+					<h3>After</h3><br>
+				</div>
+				<div class="col-12 col-lg-2">
+					<img src="../img/after-tables.png" class="img-fluid" style="max-height: 600px;border: 1px solid #ccc;" />
+				</div>
+				<div class="col-12 col-lg-2">
+					<img src="../img/after-menu.png" class="img-fluid" style="max-height: 600px;border: 1px solid #ccc;" />
+				</div>
+				<div class="col-12 col-lg-2">
+					<img src="../img/after-pay.png" class="img-fluid" style="max-height: 600px;border: 1px solid #ccc;" />
 				</div>
 			</div>
 
 			<div class="row pagination">
 				<div class="col text-center">
-					<a href="../projects/mkr.html" class="big-link">Next &rarr;</a>
+					<a href="../projects/kiosk.html" class="big-link">Next &rarr;</a>
 				</div>
 			</div>
 		</div>
