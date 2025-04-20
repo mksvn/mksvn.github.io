@@ -4,6 +4,10 @@
 
 body {
 	overflow-x: hidden;
+	cursor: url('../img/cursor-circle.svg'), auto;
+}
+a:hover {
+	cursor: url('../img/cursor-circle-hover.svg'), auto;
 }
 html {
 	scroll-behavior: smooth;
