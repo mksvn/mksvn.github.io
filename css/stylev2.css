@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
 
@@ -63,10 +62,11 @@ h1 {
 	font-size: 2em;
 }
 h2 {
-	font-size: 1.5em;
+	font-size: 1.75em;
 }
 h3 {
 	font-size: 1.25em;
+	font-weight: 700;
 }
 body, p {
     font-family: "Roboto", sans-serif;
@@ -361,6 +361,19 @@ ol li:before {
 }
 .arrow-down {
 	font-size: 3rem;opacity: 0.15;
+}
+.kiosk-prototype {
+	background-image: url('../img/kiosk-prototype.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 10px;
+	height: 300px;
+}
+@media (min-width: 768px) {
+	.kiosk-prototype {
+		height: 768px;
+	}
 }
 /*************************
  * Accordion
