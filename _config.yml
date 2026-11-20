@@ -1,0 +1,4 @@
+# GitHub Pages runs Jekyll, which turns Markdown files into HTML pages.
+# Those generated pages would have no noindex tag, so skip them.
+exclude:
+  - old/projects/vidlib/AGENTS.md
