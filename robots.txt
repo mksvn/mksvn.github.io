@@ -1,3 +1,29 @@
+# Keep this site out of search results.
+#
+# Every HTML page has <meta name="robots" content="noindex, nofollow">.
+# HTML pages are NOT blocked here on purpose: a search engine has to read
+# that tag to drop a page. A page blocked by robots.txt can still be listed
+# by its bare URL if another site links to it.
+#
+# Files that can't carry the tag (PDFs, images, video, data, source) are
+# blocked instead.
 User-agent: *
-Disallow: /portfolio/
-Disallow: /old/
+Disallow: /*.pdf
+Disallow: /*.png
+Disallow: /*.jpg
+Disallow: /*.jpeg
+Disallow: /*.gif
+Disallow: /*.svg
+Disallow: /*.ico
+Disallow: /*.mp4
+Disallow: /*.csv
+Disallow: /*.json
+Disallow: /*.txt
+Disallow: /*.md
+Disallow: /*.mdc
+Disallow: /*.ts
+Disallow: /*.tsx
+Disallow: /*.mjs
+Disallow: /*.map
+Disallow: /*.yaml
+Disallow: /*.toml
