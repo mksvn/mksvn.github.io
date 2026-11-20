@@ -1,137 +1,84 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  	<head>
-	    <meta charset="utf-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta property="og:image" content="http://mksvn.com/img/mksvn-og.jpg" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Michelle Meksavanh – Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg: #0a0a0a; --panel: #1c1c1c; --line: #3d3a32; --text: #ebe5d1; --muted: #a8a290; --accent: #00d4ca; --error: #ff8a73; }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text); font-family: Inter, system-ui, sans-serif;
+      background-image: linear-gradient(rgba(235, 229, 209, 0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(235, 229, 209, 0.07) 1px, transparent 1px);
+      background-size: 180px 180px; background-position: -1px 71px;
+      display: flex; flex-direction: column;
+    }
+    .path { padding: 20px 32px; font: 700 clamp(22px, 3vw, 34px)/1 Inter, sans-serif; letter-spacing: -0.02em; color: var(--accent); }
+    main { flex: 1; display: grid; place-items: center; padding: 24px; }
+    .box { width: min(420px, 100%); background: var(--panel); border: 1px solid var(--line); padding: 28px; display: flex; flex-direction: column; gap: 16px; }
+    h1 { margin: 0; font-size: 22px; line-height: 1.2; }
+    p { margin: 0; color: var(--muted); line-height: 1.5; font-size: 15px; }
+    label { font: 400 12px 'Space Mono', monospace; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+    .row { display: flex; gap: 8px; }
+    input {
+      flex: 1; min-width: 0; height: 44px; padding: 0 12px; background: #0d0d0d; color: var(--text);
+      border: 1px solid #827d70; font: 400 16px 'Space Mono', monospace;
+    }
+    input[aria-invalid="true"] { border-color: var(--error); }
+    button { height: 44px; padding: 0 18px; border: 0; background: var(--accent); color: #0a0e1a; font: 700 14px 'Space Mono', monospace; cursor: pointer; }
+    input:focus-visible, button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .error { min-height: 1.5em; color: var(--error); font-size: 14px; }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="path" aria-hidden="true">m:\meksavanh</div>
+  <main>
+    <form class="box" id="gate" novalidate>
+      <h1>Michelle Meksavanh</h1>
+      <p>Design Technologist. This portfolio is shared by link and password.</p>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <label for="pw">Password</label>
+        <div class="row">
+          <input id="pw" type="password" autocomplete="current-password" required aria-describedby="err" />
+          <button type="submit">Enter</button>
+        </div>
+      </div>
+      <p class="error" id="err" role="alert"></p>
+      <p style="font-size:13px">Need access? <a href="mailto:m.mksvn@gmail.com">m.mksvn@gmail.com</a></p>
+    </form>
+  </main>
+  <script>
+    // SHA-256 of the password, in hex. Generate with:  printf '%s' 'your-password' | shasum -a 256
+    // This is a light gate for a static site, not real security: anyone with the /portfolio/ URL can open it.
+    const PASSWORD_SHA256 = '2415f50d4aa44c1aeefdee019793fce717601a184ab1f140c0af1a03c2e4b8ac';
+    const DEST = '/portfolio/';
 
-		<title>Michelle Meksavanh &#10141; UX/UI Designer</title>
-
-		<!-- Bootstrap core CSS -->
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<link rel="stylesheet" href="css/stylev2.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"><link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<!-- animsition.css -->
-		<link rel="stylesheet" href="../css/animsition.css">
-		
-	</head>
-	<body class="d-flex flex-column h-100" style="background-color: #475F04;">
-	<div class="animsition-overlay" data-animsition-overlay="true">
-
-		<div class="container-fluid">
-			<div class="row justify-content-center text-center">
-				<div class="col-12" style="padding: 120px 0;">
-					<img src="img/mm-header.png" alt="" class="d-none d-sm-block mx-auto" style="max-width: 1000px;width: 100%;">
-					<img src="img/mm-header-m.png" alt="" class="d-block d-sm-none" style="max-width: 1000px;width: 100%;">
-				</div>
-			</div> 
-			<div class="row">
-				<div class="col-12 home-title mb-5">
-					<h2>CASE STUDIES</h2>
-				</div>
-			</div>
-		</div>
-
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-12 col-md-4 text-center mb-5">
-					<a href="projects/pebblepos.html"><img src="img/th-pebble.png" alt="" width="200" class="home-thumb"></a>
-				</div>
-				<div class="col-12 col-md-4 text-center mb-5">
-					<a href="projects/kiosk.html"><img src="img/th-pos2.png" alt="" width="300" class="home-thumb"></a>
-				</div>
-				<div class="col-12 col-md-4 text-center mb-5">
-					<a href="projects/hday.html"><img src="img/th-watch.png" alt="" width="250" class="home-thumb"></a>
-				</div>
-				<div class="col-12 col-md-4 text-center mb-5">
-					<a href="projects/menu.html"><img src="img/th-csv.png" alt="" width="170" class="home-thumb"></a>
-				</div>
-				<div class="col-12 col-md-4 text-center mb-5">
-					<a href="projects/mkr.html"><img src="img/th-mkr2.png" alt="" width="350" class="home-thumb"></a>
-				</div>
-				<div class="col-12 col-md-4 text-center mb-5">
-					<a href="projects/designsystem.html"><img src="img/th-designsys.png" alt="" width="300" class="home-thumb"></a>
-				</div>
-			</div>
-		</div>
-
-		<!-- <div class="container-fluid">
-			<div class="row">
-				<div class="col-12 home-title mb-5">
-					<h2>PLAY</h2>
-				</div>
-			</div>
-		</div>
-
-		<div class="container">
-			<div class="row justify-content-center">
-				<h3 style="color: #fff;">Coming soon...</h3>
-			</div>
-		</div> -->
-
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-12 mt-5 text-center">
-					<h3 style="color: #fff;">Email me</h3>
-					<img src="img/emailcopy.png" alt="" style="max-width: 300px;" onclick="copyEmail()" id="copyemail">
-					<p style="color: #fff;">© Michelle Meksavanh 2025</p>
-				</div>
-			</div>
-		</div>
-	</div> <!-- /.animsition-overlay -->
-		
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
-		<script src="../js/animsition.min.js"></script>
-
-		<script>
-			function copyEmail() {
-				navigator.clipboard.writeText('m.mksvn@gmail.com');
-
-				document.getElementById('copyemail').src='img/emailcopy-done.png';
-
-				setTimeout(() => {
-					document.getElementById('copyemail').src='img/emailcopy.png';
-				}, 3000);  
-			}
-		</script>
-		<script type="text/javascript">
-			$(document).ready(function() {
-			  $("a").each(function(){
-			  	if ( !(this.classList.contains("no-transition")) ) {
-			  		$(this).addClass('animsition-link');
-			  	}
-			  });
-			  $(".animsition-overlay").animsition({
-			    inClass: 'overlay-slide-in-left',
-			    outClass: 'overlay-slide-out-left',
-			    inDuration: 1500,
-			    outDuration: 800,
-			    linkElement: '.animsition-link',
-			    // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
-			    loading: true,
-			    loadingParentElement: 'body', //animsition wrapper element
-			    loadingClass: 'animsition-loading',
-			    loadingInner: '', // e.g '<img src="loading.svg" />'
-			    timeout: false,
-			    timeoutCountdown: 5000,
-			    onLoadEvent: true,
-			    browser: [ 'animation-duration', '-webkit-animation-duration'],
-			    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
-			    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
-			    overlay : true,
-			    overlayClass : 'animsition-overlay-slide',
-			    overlayParentElement : 'body',
-			    transition: function(url){ window.location.href = url; }
-			  });
-			  	$(".accordion").on("click", function() {
-				$(this).toggleClass("accordion-active");
-				$(this).next().slideToggle(200);
-			  });
-			});
-		</script>
-	</body>
+    const form = document.getElementById('gate');
+    const input = document.getElementById('pw');
+    const err = document.getElementById('err');
+    const sha256 = async (text) => {
+      const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
+      return Array.from(new Uint8Array(buf)).map((b) => b.toString(16).padStart(2, '0')).join('');
+    };
+    try { if (sessionStorage.getItem('mm-unlocked') === '1') location.replace(DEST); } catch (e) {}
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if ((await sha256(input.value)) === PASSWORD_SHA256) {
+        try { sessionStorage.setItem('mm-unlocked', '1'); } catch (e) {}
+        location.assign(DEST);
+      } else {
+        input.setAttribute('aria-invalid', 'true');
+        err.textContent = 'That password didn’t work. Try again.';
+        input.select();
+      }
+    });
+    input.addEventListener('input', () => { input.removeAttribute('aria-invalid'); err.textContent = ''; });
+    input.focus();
+  </script>
+</body>
 </html>
