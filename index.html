@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Michelle Meksavanh – Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg: #0a0a0a; --panel: #1c1c1c; --line: #3d3a32; --text: #ebe5d1; --muted: #a8a290; --accent: #00d4ca; --error: #ff8a73; }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text); font-family: Inter, system-ui, sans-serif;
+      background-image: linear-gradient(rgba(235, 229, 209, 0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(235, 229, 209, 0.07) 1px, transparent 1px);
+      background-size: 180px 180px; background-position: -1px 71px;
+      display: flex; flex-direction: column;
+    }
+    .path { padding: 20px 32px; font: 700 clamp(22px, 3vw, 34px)/1 Inter, sans-serif; letter-spacing: -0.02em; color: var(--accent); }
+    main { flex: 1; display: grid; place-items: center; padding: 24px; }
+    .box { width: min(420px, 100%); background: var(--panel); border: 1px solid var(--line); padding: 28px; display: flex; flex-direction: column; gap: 16px; }
+    h1 { margin: 0; font-size: 22px; line-height: 1.2; }
+    p { margin: 0; color: var(--muted); line-height: 1.5; font-size: 15px; }
+    label { font: 400 12px 'Space Mono', monospace; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+    .row { display: flex; gap: 8px; }
+    input {
+      flex: 1; min-width: 0; height: 44px; padding: 0 12px; background: #0d0d0d; color: var(--text);
+      border: 1px solid #827d70; font: 400 16px 'Space Mono', monospace;
+    }
+    input[aria-invalid="true"] { border-color: var(--error); }
+    button { height: 44px; padding: 0 18px; border: 0; background: var(--accent); color: #0a0e1a; font: 700 14px 'Space Mono', monospace; cursor: pointer; }
+    input:focus-visible, button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .error { min-height: 1.5em; color: var(--error); font-size: 14px; }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="path" aria-hidden="true">m:\meksavanh</div>
+  <main>
+    <form class="box" id="gate" novalidate>
+      <h1>Michelle Meksavanh</h1>
+      <p>Design Technologist. This portfolio is shared by link and password.</p>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <label for="pw">Password</label>
+        <div class="row">
+          <input id="pw" type="password" autocomplete="current-password" required aria-describedby="err" />
+          <button type="submit">Enter</button>
+        </div>
+      </div>
+      <p class="error" id="err" role="alert"></p>
+      <p style="font-size:13px">Need access? <a href="mailto:m.mksvn@gmail.com">m.mksvn@gmail.com</a></p>
+    </form>
+  </main>
+  <script>
+    // SHA-256 of the password, in hex. Generate with:  printf '%s' 'your-password' | shasum -a 256
+    // This is a light gate for a static site, not real security: anyone with the /portfolio/ URL can open it.
+    const PASSWORD_SHA256 = '2415f50d4aa44c1aeefdee019793fce717601a184ab1f140c0af1a03c2e4b8ac';
+    const DEST = '/portfolio/';
+
+    const form = document.getElementById('gate');
+    const input = document.getElementById('pw');
+    const err = document.getElementById('err');
+    const sha256 = async (text) => {
+      const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
+      return Array.from(new Uint8Array(buf)).map((b) => b.toString(16).padStart(2, '0')).join('');
+    };
+    try { if (sessionStorage.getItem('mm-unlocked') === '1') location.replace(DEST); } catch (e) {}
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if ((await sha256(input.value)) === PASSWORD_SHA256) {
+        try { sessionStorage.setItem('mm-unlocked', '1'); } catch (e) {}
+        location.assign(DEST);
+      } else {
+        input.setAttribute('aria-invalid', 'true');
+        err.textContent = 'That password didn’t work. Try again.';
+        input.select();
+      }
+    });
+    input.addEventListener('input', () => { input.removeAttribute('aria-invalid'); err.textContent = ''; });
+    input.focus();
+  </script>
+</body>
+</html>
